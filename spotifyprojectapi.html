@@ -1,0 +1,73 @@
+<html>
+  <head> </head>
+  <style>
+    body {
+      margin: 0px;
+      background-color: #708cad;
+    }
+    .header {
+      font-family: "Alfa Slab One";
+      font-size: 2vw;
+      background-color: #567395;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .main-content {
+      padding: 1vw;
+      font-size: 2vw;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .img {
+      width: 50vw;
+      margin: 1vw;
+    }
+  </style>
+  <div class="header">
+    <h1>Spotify Group Listening (Using Spotify API)</h1>
+    <h1>By: Tucker Dooley</h1>
+  </div>
+  <body>
+    <div class="main-content">
+      <a href="https://spotify-group-listening.herokuapp.com/"
+        >https://spotify-group-listening.herokuapp.com/</a
+      >
+      <p>
+        I made this project so that when I'm hanging with friends we can all
+        easily add/remove songs from the hosts spotify queue without having to
+        make the host manually enter or remove peoples songs all the time.
+      </p>
+      <p>
+        I previously made a selenium version of this application just for fun.
+        However I wanted a more practical implementation of this app, so I
+        learned how Spotify's API worked and made a better version of the app.
+      </p>
+      <p>
+        I reused my room system from my online poker website. I then made it so
+        that whoever creates a room is intending on linking thier spotifty so
+        that their friends can add/remove pause/play skip/go to previous songs.
+        So when a user clicks "Create Group" it creates a unique 16 digit room
+        code which the creator can give to friends ( or just send them the
+        link). Then it redirects the creator to Spotify's authentification page,
+        which then redirects them to the call back page, which redirects them to
+        their new room. All of the authentification tokens are temporarily
+        stored on the server in each rooms state ( which is never accessable by
+        clients).
+      </p>
+      <p>
+        Before the creation process is done the creator needs to navigate to a
+        new "Spotify Group Listening" playlist on their account and play a song
+        in there ( if there is none, then add a buffer song while your friends
+        add more ). Now that the creating process is done, anyone with the link
+        or code can add/remove pause/play skip/go to previous songs.
+      </p>
+
+      <img src="/spotifyapi1.PNG" class="img" />
+      <img src="/spotifyapi2.PNG" class="img" />
+      <img src="/spotifyapi3.PNG" class="img" />
+    </div>
+  </body>
+</html>
