@@ -1,80 +1,272 @@
-<html>
-  <head> </head>
-  <style>
-    body {
-      margin: 0px;
-    }
-    .header {
-      font-family: "Alfa Slab One";
-      font-size: 2vw;
-      background-color: #567395;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .aboutme {
-      background-color: #708cad;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .project {
-      font-size: 1vw;
-      background-color: #304154;
-      width: 25%;
-      height: 20vw;
-      margin: 1vw;
-      border: solid black 2px;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      padding: 1vw;
-    }
-    .project-description {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    .profile-img {
-      vertical-align: bottom;
-      height: 26vw;
-      border: solid black 2px;
-    }
-    .description {
-      font-size: 1.5vw;
-    }
-    .technology-list {
-      font-size: 1vw;
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
   <body>
-    <div class="header">
+    <div class="jumbotron text-center" style="margin-bottom: 0;">
       <h1>Tucker Dooley</h1>
       <h3>Software Engineer</h3>
     </div>
 
-    <div class="aboutme">
-      <h3>About Me</h3>
-      <img src="/tucker.PNG" class="profile-img" />
-      <p>
-        I'm a senior at IUPUI majoring in Computer Science with a minor in
-        Mathematics.
-      </p>
-      <p>
-        I am currently searching for full time Software Engineering positions
-        starting after I graduate in May 2021.
-      </p>
-      <p>
-        I have loved working on fun personal projects since I was in middle
-        school where I started learning Java and making Minecraft mods. Since
-        then I have made several projects. I have tried to document as many of
-        them as possible on this website. You can find them on the "Projects"
-        tab. Some of the projects I've made are
-      </p>
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid">
+      <div class="text-center">
+        <h3>About Me</h3>
+      </div>
+      <div class="row">
+        <div class="col-lg">
+          <p>
+            I'm a senior at IUPUI majoring in Computer Science with a minor in
+            Mathematics.
+          </p>
+          <p>
+            I am currently searching for full time Software Engineering
+            positions starting after I graduate in May 2021.
+          </p>
+          <p>
+            I have loved working on fun personal projects since I was in middle
+            school where I started learning Java and making Minecraft mods.
+            Since then I have made several projects. I have tried to document as
+            many of them as possible on this website. You can find them on the
+            "Projects" tab.
+          </p>
+        </div>
+        <div class="text-center col-lg">
+          <img src="/tucker.PNG" class="rounded img-fluid" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h3>Technologies</h3>
+      </div>
+
+      <div class="row">
+        <div class="list-group col pl-3" id="myList" role="tablist">
+          <a
+            class="list-group-item list-group-item-action active"
+            data-toggle="list"
+            href="#node"
+            role="tab"
+            >Node.js</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#socketio"
+            role="tab"
+            >Socket.IO</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#html"
+            role="tab"
+            >HTML/CSS/JS</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#bootstrap"
+            role="tab"
+            >Bootstrap</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#php"
+            role="tab"
+            >PHP</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#sql"
+            role="tab"
+            >SQL</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#cpp"
+            role="tab"
+            >C++</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#c"
+            role="tab"
+            >C</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#python"
+            role="tab"
+            >Python</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#java"
+            role="tab"
+            >Java</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#ember"
+            role="tab"
+            >Ember.js</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#mongodb"
+            role="tab"
+            >MongoDB</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#react"
+            role="tab"
+            >React.js</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#selenium"
+            role="tab"
+            >Selenium</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#aws"
+            role="tab"
+            >AWS</a
+          >
+
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#formstack"
+            role="tab"
+            >Formstack</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#godot"
+            role="tab"
+            >Godot</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-toggle="list"
+            href="#blender"
+            role="tab"
+            >Blender</a
+          >
+        </div>
+
+        <div class="tab-content col">
+          <div class="tab-pane fade" id="c" role="tabpanel">
+            C
+          </div>
+          <div class="tab-pane fade" id="cpp" role="tabpanel">c++</div>
+          <div class="tab-pane fade show active" id="node" role="tabpanel">
+            <h5>Experience with Node.js</h5>
+            <ul>
+              <li>Multiplayer Poker App</li>
+              <li>Spotify Song Request App</li>
+              <li>2D Multiplayer Game</li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="ember" role="tabpanel">
+            Ember.js
+          </div>
+          <div class="tab-pane fade" id="react" role="tabpanel">
+            React.js
+          </div>
+          <div class="tab-pane fade" id="bootstrap" role="tabpanel">
+            Bootstrap
+          </div>
+          <div class="tab-pane fade" id="java" role="tabpanel">
+            Java
+          </div>
+          <div class="tab-pane fade" id="formstack" role="tabpanel">
+            Formstack
+          </div>
+          <div class="tab-pane fade" id="selenium" role="tabpanel">
+            Selenium ( Python )
+          </div>
+          <div class="tab-pane fade" id="python" role="tabpanel">
+            Python
+          </div>
+          <div class="tab-pane fade" id="godot" role="tabpanel">
+            Godot
+          </div>
+          <div class="tab-pane fade" id="blender" role="tabpanel">
+            Blender
+          </div>
+          <div class="tab-pane fade" id="php" role="tabpanel">
+            PHP
+          </div>
+          <div class="tab-pane fade" id="sql" role="tabpanel">
+            SQL
+          </div>
+          <div class="tab-pane fade" id="html" role="tabpanel">
+            HTML/CSS/JS
+          </div>
+          <div class="tab-pane fade" id="aws" role="tabpanel">
+            AWS
+          </div>
+          <div class="tab-pane fade" id="mongodb" role="tabpanel">
+            Mongodb
+          </div>
+          <div class="tab-pane fade" id="socketio" role="tabpanel">
+            Socket.IO
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0;">
+      <p>Footer</p>
     </div>
   </body>
 </html>
