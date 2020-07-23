@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0;">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav class="navbar navbar-expand bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid">
+      <div class="text-center">
+        <h3>Online Multiplayer Texas Hold'em Poker</h3>
+        <a href="https://poker-io.herokuapp.com/"
+          ><h4>https://poker-io.herokuapp.com/</h4></a
+        >
+      </div>
+      <p>
+        When quarantine started because of COVID-19 my friends and I all wanted
+        to play online Texas Hold'em Poker. However as we searched for a good
+        website, we learned that every website out there either made you sign up
+        and endure hundreds of ads, or made you download their program and also
+        sign up and endure ads. So I figured it would'nt be too hard to make my
+        own poker website. ( I was wrong )
+      </p>
+      <p>
+        I used node JS, Socket IO, and HTML/CSS/JS for the entire project. I
+        used bootstrap just for the room creation page. I made a room system
+        where friends could name their own group room and send the link to
+        everyone who wants to join. I got the cards from OpenGameArt.com ( They
+        were CC but I will credit the creators soon ).
+      </p>
+      <p>
+        This is the second or third iteration of this project, and might not be
+        the final iteration. I initially got an idea from (insert website) where
+        they trust the users to just drag cards around and abide all the game
+        logic rules on their own. So I made a program where it would spit out a
+        randomized deck in one slot with several empty slots for the users to
+        manually drag around. Once I finished I play tested it with friends and
+        found that it was not very fun.
+      </p>
+      <p>
+        Then I began working on this version where all the game logic is
+        programmed in and makes the entire process much smoother for users. I
+        still have more work to do on this, but for now I am too bored of
+        working on it so I have temporarily moved on to other projects.
+      </p>
+      <img src="/poker2.PNG" class="rounded img-fluid" />
+      <img src="/poker.PNG" class="rounded img-fluid" />
+    </div>
+  </body>
+</html>
