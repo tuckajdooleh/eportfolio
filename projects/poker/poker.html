@@ -65,9 +65,10 @@
       </p>
       <p>
         This is the second or third iteration of this project, and might not be
-        the final iteration. I initially got an idea from (insert website) where
-        they trust the users to just drag cards around and abide all the game
-        logic rules on their own. So I made a program where it would spit out a
+        the final iteration. I initially got an idea from
+        <a href="http://playingcards.io/">http://playingcards.io/</a> where they
+        trust the users to just drag cards around and follow all the game logic
+        rules on their own. So I made a program where it would spit out a
         randomized deck in one slot with several empty slots for the users to
         manually drag around. Once I finished I play tested it with friends and
         found that it was not very fun.
@@ -77,6 +78,21 @@
         programmed in and makes the entire process much smoother for users. I
         still have more work to do on this, but for now I am too bored of
         working on it so I have temporarily moved on to other projects.
+      </p>
+      <p>
+        It works fairly well. I still need to fix the issue where if the first
+        player checks, and another player raises, it will cycle back too many
+        times to make sure all players had a chance to call.
+      </p>
+      <p>
+        Another issue is room deletion, and random crashes. I assume the random
+        crashes are from Heroku, but I could have just made a huge mistake
+        somewhere. Room deletion isn't a huge issue because Heroku restarts my
+        server all the time so the rooms get deleted anyway.
+      </p>
+      <p>
+        I also used custom CSS for the game page, but this has lead to the game
+        page not looking right on Safari.
       </p>
       <div class="d-flex flex-wrap justify-content-center">
         <img src="poker2.PNG" class="rounded img-fluid border m-3" />

@@ -46,7 +46,31 @@
       </div>
       <br />
       <p>
-        insert description
+        I started this project because I wanted an application where I could
+        send a link to my friends and they could add songs to my spotify queue.
+        So if I'm having a party instead of my friends asking me to add songs,
+        they can do it themselves with the website.
+      </p>
+      <p>
+        I knew an API implementation would be best, however I was having fun
+        using python and selenium for web automation, so I chose to make the
+        first version with selenium.
+      </p>
+      <p>
+        The application consisted of 2 programs running at the same time. One
+        was a Python/Selenium program that would automatically log into the
+        spotify web player with my credentials. It would also check a text file
+        every 2 seconds to see if there are any songs on it. If so, then it
+        would perform a search for that song, and begin playing the first song
+        that comes up from that search. It will also check the time every 2
+        seconds to see if the song has finished playing. If so, it will start
+        playing the next song.
+      </p>
+      <p>
+        The other program was a Node.js/SocketIO app that would host the song
+        request interface. I used bootstrap for the front end. Whenever a user
+        added a song it would emit a signal to the Node server. The Node server
+        would then write that song name to the end of the txt file.
       </p>
 
       <div class="d-flex flex-wrap justify-content-center">
