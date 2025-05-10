@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
-  Menu,
-  X,
   Sun,
   Moon,
   Github,
   Linkedin,
   Mail,
   FileText,
+  Menu,
 } from "lucide-react";
 import type { UserInfo } from "../../types";
 
 function Header({ userInfo }: { userInfo: UserInfo }) {
-  // State for mobile menu toggle and theme
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  // State for theme
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   // Effect to handle theme changes
@@ -52,17 +50,72 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
     { name: "Contact", href: "#contact" },
   ];
 
+  // Social links component for reuse
+  const SocialLinks = ({ className = "" }) => (
+    <div className={`flex items-center gap-2 ${className}`}>
+      {userInfo.socialLinks?.github && (
+        <a
+          href={userInfo.socialLinks.github}
+          className="btn btn-ghost btn-sm btn-circle"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github size={20} />
+        </a>
+      )}
+
+      {userInfo.socialLinks?.linkedin && (
+        <a
+          href={userInfo.socialLinks.linkedin}
+          className="btn btn-ghost btn-sm btn-circle"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin size={20} />
+        </a>
+      )}
+
+      {userInfo.socialLinks?.email && (
+        <a
+          href={userInfo.socialLinks.email}
+          className="btn btn-ghost btn-sm btn-circle"
+          aria-label="Email"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Mail size={20} />
+        </a>
+      )}
+
+      {userInfo.socialLinks?.resume && (
+        <a
+          href={userInfo.socialLinks.resume}
+          className="btn btn-ghost btn-sm btn-circle"
+          aria-label="Resume"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FileText size={20} />
+        </a>
+      )}
+    </div>
+  );
+
   return (
-    <header className="navbar bg-base-100 shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4">
+    <header className="navbar bg-base-300 shadow-lg">
+      <div className="container mx-auto flex justify-between">
         {/* Logo and Name Section */}
         <div className="flex-1">
-          <a href="#" className="text-xl md:text-2xl font-bold text-primary">
-            {userInfo.name}
-            <span className="block text-sm font-normal text-base-content/70">
+          <div className="flex flex-col">
+            <a href="#" className="text-2xl font-bold text-primary">
+              {userInfo.name}
+            </a>
+            <span className="text-md font-normal text-base-content">
               {userInfo.title}
             </span>
-          </a>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -81,54 +134,8 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
           </ul>
 
           {/* Social Links */}
-          <div className="flex items-center ml-4 gap-2">
-            {userInfo.socialLinks?.github && (
-              <a
-                href={userInfo.socialLinks.github}
-                className="btn btn-ghost btn-sm btn-circle"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github size={20} />
-              </a>
-            )}
-
-            {userInfo.socialLinks?.linkedin && (
-              <a
-                href={userInfo.socialLinks.linkedin}
-                className="btn btn-ghost btn-sm btn-circle"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin size={20} />
-              </a>
-            )}
-
-            {userInfo.socialLinks?.email && (
-              <a
-                href={userInfo.socialLinks.email}
-                className="btn btn-ghost btn-sm btn-circle"
-                aria-label="Email"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mail size={20} />
-              </a>
-            )}
-
-            {userInfo.socialLinks?.resume && (
-              <a
-                href={userInfo.socialLinks.resume}
-                className="btn btn-ghost btn-sm btn-circle"
-                aria-label="Resume"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FileText size={20} />
-              </a>
-            )}
+          <div className="flex items-center ml-4">
+            <SocialLinks />
 
             {/* Theme Toggle */}
             <button
@@ -143,96 +150,44 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex-none md:hidden">
+        {/* Mobile Menu - Using daisyUI dropdown */}
+        <div className="flex-none md:hidden flex items-center">
+          {/* Theme Toggle for Mobile */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="btn btn-ghost btn-circle"
-            aria-label="Toggle menu"
+            onClick={toggleTheme}
+            className="btn btn-ghost btn-sm btn-circle mr-2"
+            aria-label={
+              darkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
+
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost">
+              <Menu />
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a href={link.href}>{link.name}</a>
+                </li>
+              ))}
+              <li className="menu-title pt-2">
+                <span>Social</span>
+              </li>
+              <li>
+                <div className="flex justify-center py-2">
+                  <SocialLinks className="justify-center" />
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      {/* Mobile Menu Dropdown */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-base-100 shadow-lg z-50">
-          <ul className="menu menu-vertical p-4">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="py-2 hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-            <li className="divider my-2"></li>
-            <li className="flex flex-row justify-center gap-2 py-2">
-              {userInfo.socialLinks?.github && (
-                <a
-                  href={userInfo.socialLinks.github}
-                  className="btn btn-ghost btn-sm btn-circle"
-                  aria-label="GitHub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github size={20} />
-                </a>
-              )}
-
-              {userInfo.socialLinks?.linkedin && (
-                <a
-                  href={userInfo.socialLinks.linkedin}
-                  className="btn btn-ghost btn-sm btn-circle"
-                  aria-label="LinkedIn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin size={20} />
-                </a>
-              )}
-
-              {userInfo.socialLinks?.email && (
-                <a
-                  href={userInfo.socialLinks.email}
-                  className="btn btn-ghost btn-sm btn-circle"
-                  aria-label="Email"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Mail size={20} />
-                </a>
-              )}
-
-              {userInfo.socialLinks?.resume && (
-                <a
-                  href={userInfo.socialLinks.resume}
-                  className="btn btn-ghost btn-sm btn-circle"
-                  aria-label="Resume"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FileText size={20} />
-                </a>
-              )}
-
-              <button
-                onClick={toggleTheme}
-                className="btn btn-ghost btn-sm btn-circle"
-                aria-label={
-                  darkMode ? "Switch to light mode" : "Switch to dark mode"
-                }
-              >
-                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-            </li>
-          </ul>
-        </div>
-      )}
     </header>
   );
 }

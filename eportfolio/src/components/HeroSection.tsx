@@ -1,18 +1,52 @@
+import Typewriter from "typewriter-effect";
+import ParticlesBackground from "./ParticlesBackground";
+import AnimatedSkills from "./AnimatedSkills";
+import CountUpStats from "./CountUpStats";
+
 function HeroSection() {
   return (
     <>
-      <section id="hero" className="hero min-h-screen">
-        <div className="hero-content text-center">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold text-primary mb-6">
-              Building Exceptional Web Experiences
+      <section id="hero" className="hero min-h-screen relative overflow-hidden">
+        {/* Particles Background */}
+        <div className="absolute inset-0">
+          <ParticlesBackground />
+        </div>
+
+        <div className="hero-content text-center z-10">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl font-bold text-primary mb-2">
+              I Am:
+              <span className="text-secondary">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "A Fullstack Software Engineer",
+                      "A Certified AWS Expert",
+                      "A Former Amazonian",
+                      "A Hobby Programmer",
+                      "A Game Developer",
+                      "A Computer Science Graduate",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    deleteSpeed: 30,
+                  }}
+                />
+              </span>
             </h1>
+
             <p className="py-6 text-xl">
-              I craft clean, user-friendly interfaces and robust web
-              applications that solve real-world problems. With expertise in
-              modern frontend technologies, I turn complex requirements into
-              elegant solutions.
+              At home I enjoy spending my free time learning more about cutting
+              edge frameworks/technologies/trends and working on projects. At
+              work I strive to write high quality code and delivering results.
             </p>
+
+            <CountUpStats />
+
+            {/* Skills Section */}
+            <AnimatedSkills />
+
             <div className="flex flex-wrap justify-center gap-4 mt-6">
               <a href="#projects" className="btn btn-primary">
                 View My Work

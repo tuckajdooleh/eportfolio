@@ -6,7 +6,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-base-100">
+      <div className="min-h-screen">
         <Header userInfo={USER_INFO} />
         <Body />
         <Footer userInfo={USER_INFO} />

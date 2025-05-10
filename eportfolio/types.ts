@@ -33,3 +33,26 @@ export interface UserInfo
   title: string
   socialLinks: SocialLinks
 }
+
+export interface Education {
+  school: string
+  startDate: Date
+  endDate: Date
+  major: string
+  degree: string
+  minor: string
+}
+
+export interface Certification {
+  title: string
+}
+
+export interface Award {
+  title: string
+}
+
+export interface Statistics {
+  projectCount: number,
+  professionalExperienceYears: number
+  internExperienceYears: number
+}

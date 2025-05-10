@@ -7,7 +7,7 @@ import Contact from "./Contact";
 
 function Body() {
   return (
-    <main className="container mx-auto px-4 py-12">
+    <main className="container mx-auto">
       <HeroSection />
       <Projects projects={PROJECTS} />
       <Experiences experiences={EXPERIENCES} />

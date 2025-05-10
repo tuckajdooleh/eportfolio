@@ -1,4 +1,4 @@
-import type { Experience, Project, SkillCategory, UserInfo } from "./types";
+import type { Award, Certification, Education, Experience, Project, SkillCategory, UserInfo } from "./types";
 
 export const PROJECTS: Project[] = [
   {
@@ -122,3 +122,22 @@ export const USER_INFO: UserInfo = {
     resume: "/Resume.pdf",
   },
 };
+
+export const EDUCATIONS: Education[] = [
+  {
+    school: "Purdue University of Indianapolis",
+    startDate: new Date("2017/03/03"),
+    endDate: new Date("2021/03/03"),
+    major: "Computer Science",
+    degree: "Bachelors of Science",
+    minor: "Mathematics"
+  }
+]
+
+export const CERTIFICATIONS: Certification[] = [
+  {title: "SAFE"},{title: "AWS Developer Associate"}, {title: "AWS Cloud Practitioner"}
+]
+
+export const AWARDS: Award[] = [
+  
+]
