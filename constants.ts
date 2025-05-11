@@ -146,7 +146,6 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-// Sample experience data
 export const EXPERIENCES: Experience[] = [
   {
     company: "Encora Inc.",
@@ -222,7 +221,6 @@ export const EXPERIENCES: Experience[] = [
   },
 ];
 
-// Sample skills data
 export const SKILLS: SkillCategory[] = [
   {
     category: "Frontend",

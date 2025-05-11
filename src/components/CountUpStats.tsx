@@ -4,13 +4,11 @@ import { CERTIFICATIONS, EDUCATIONS, PROJECTS } from "../../constants";
 import { getYearsSinceDate, getDaysSinceDate } from "../../utils";
 
 function CountUpStats() {
-  // Using Intersection Observer to detect when stats are visible
   const { ref: statsRef, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  // Stats data array for easier maintenance and additions
   const stats = [
     {
       title: "Projects Completed",

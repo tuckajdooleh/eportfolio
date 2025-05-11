@@ -1,11 +1,10 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 
 const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    // Use loadSlim for better performance (or loadFull if you need all features)
     await loadSlim(engine);
   }, []);
 
@@ -26,10 +25,10 @@ const ParticlesBackground = () => {
         fpsLimit: 120,
         particles: {
           color: {
-            value: "#6419e6", // Primary color (adjust to match your theme)
+            value: "#6419e6",
           },
           links: {
-            color: "#6419e6", // Primary color (adjust to match your theme)
+            color: "#6419e6",
             distance: 150,
             enable: true,
             opacity: 0.3,

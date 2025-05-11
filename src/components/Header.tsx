@@ -11,10 +11,7 @@ import {
 import type { UserInfo } from "../../types";
 
 function Header({ userInfo }: { userInfo: UserInfo }) {
-  // State for theme
   const [darkMode, setDarkMode] = useState<boolean>(false);
-
-  // Effect to handle theme changes
   useEffect(() => {
     const isDark =
       localStorage.getItem("theme") === "dark" ||
@@ -28,8 +25,6 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
     );
     document.documentElement.classList.toggle("dark", isDark);
   }, []);
-
-  // Toggle theme function
   const toggleTheme = () => {
     const newTheme = !darkMode;
     setDarkMode(newTheme);
@@ -41,7 +36,6 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
     document.documentElement.classList.toggle("dark", newTheme);
   };
 
-  // Nav links
   const navLinks = [
     { name: "Home", href: "#" },
     { name: "Projects", href: "#projects" },
@@ -50,7 +44,6 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
     { name: "Contact", href: "#contact" },
   ];
 
-  // Social links component for reuse
   const SocialLinks = ({ className = "" }) => (
     <div className={`flex items-center gap-2 ${className}`}>
       {userInfo.socialLinks?.github && (
@@ -106,7 +99,6 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
   return (
     <header className="navbar bg-base-300 shadow-lg">
       <div className="container mx-auto flex justify-between">
-        {/* Logo and Name Section */}
         <div className="flex-1">
           <div className="flex flex-col">
             <a href="#" className="text-2xl font-bold text-primary">
@@ -117,8 +109,6 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
             </span>
           </div>
         </div>
-
-        {/* Desktop Navigation */}
         <div className="flex-none hidden md:flex">
           <ul className="menu menu-horizontal px-1 gap-1">
             {navLinks.map((link) => (
@@ -133,11 +123,9 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
             ))}
           </ul>
 
-          {/* Social Links */}
           <div className="flex items-center ml-4">
             <SocialLinks />
 
-            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="btn btn-ghost btn-sm btn-circle ml-2"
@@ -150,9 +138,7 @@ function Header({ userInfo }: { userInfo: UserInfo }) {
           </div>
         </div>
 
-        {/* Mobile Menu - Using daisyUI dropdown */}
         <div className="flex-none md:hidden flex items-center">
-          {/* Theme Toggle for Mobile */}
           <button
             onClick={toggleTheme}
             className="btn btn-ghost btn-sm btn-circle mr-2"

@@ -2,7 +2,6 @@ import { Github, Linkedin, Mail, FileText, ArrowUp } from "lucide-react";
 import type { UserInfo } from "../../types";
 
 function Footer({ userInfo }: { userInfo: UserInfo }) {
-  // Quick links for navigation
   const quickLinks = [
     { name: "Home", href: "#" },
     { name: "Projects", href: "#projects" },
@@ -11,7 +10,6 @@ function Footer({ userInfo }: { userInfo: UserInfo }) {
     { name: "Contact", href: "#contact" },
   ];
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -21,7 +19,6 @@ function Footer({ userInfo }: { userInfo: UserInfo }) {
 
   return (
     <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
-      {/* Scroll to top button */}
       <div className="container mx-auto px-4 relative">
         <button
           onClick={scrollToTop}

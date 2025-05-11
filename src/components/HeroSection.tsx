@@ -5,8 +5,6 @@ function HeroSection() {
   return (
     <>
       <section id="hero" className="hero min-h-screen relative overflow-hidden">
-        {/* Particles Background */}
-
         <div className="hero-content text-center z-10">
           <div className="max-w-4xl">
             <h1 className="h-42 text-5xl font-bold text-primary mb-2">
