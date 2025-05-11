@@ -32,22 +32,14 @@ function CountUpStats() {
     },
     {
       title: "Commits",
-      value: 1250,
+      value: 579,
       suffix: "",
-      description: "",
+      description: "In Personal Repos",
       color: "text-info",
       icon: "📊",
       duration: 3,
     },
-    {
-      title: "Companies Served",
-      value: 8,
-      suffix: "",
-      description: "",
-      color: "text-accent",
-      icon: "⭐",
-      duration: 2.5,
-    },
+
     {
       title: "Certifications",
       value: CERTIFICATIONS.length,
@@ -68,9 +60,9 @@ function CountUpStats() {
     },
     {
       title: "Lines of Code",
-      value: 156000,
+      value: 1563512,
       suffix: "+",
-      description: "And still typing",
+      description: "Maybe?",
       color: "text-error",
       icon: "💻",
       duration: 4,

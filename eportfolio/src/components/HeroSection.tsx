@@ -1,5 +1,4 @@
 import Typewriter from "typewriter-effect";
-import ParticlesBackground from "./ParticlesBackground";
 import CountUpStats from "./CountUpStats";
 
 function HeroSection() {
@@ -7,9 +6,6 @@ function HeroSection() {
     <>
       <section id="hero" className="hero min-h-screen relative overflow-hidden">
         {/* Particles Background */}
-        <div className="absolute inset-0">
-          <ParticlesBackground />
-        </div>
 
         <div className="hero-content text-center z-10">
           <div className="max-w-4xl">

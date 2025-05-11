@@ -12,18 +12,24 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Educations from "./Education";
 import Certifications from "./Certifications";
+import ParticlesBackground from "./ParticlesBackground";
 
 function Body() {
   return (
-    <main className="container mx-auto">
-      <HeroSection />
-      <Educations educations={EDUCATIONS} />
-      <Experiences experiences={EXPERIENCES} />
-      <Projects projects={PROJECTS} />
-      <Certifications certifications={CERTIFICATIONS} />
-      <Skills skills={SKILLS} />
-      <Contact />
-    </main>
+    <div className="relative">
+      <div className="absolute inset-0 h-2000">
+        <ParticlesBackground />
+      </div>
+      <main className="container mx-auto relative z-10">
+        <HeroSection />
+        <Educations educations={EDUCATIONS} />
+        <Experiences experiences={EXPERIENCES} />
+        <Projects projects={PROJECTS} />
+        <Certifications certifications={CERTIFICATIONS} />
+        <Skills skills={SKILLS} />
+        <Contact />
+      </main>
+    </div>
   );
 }
 
