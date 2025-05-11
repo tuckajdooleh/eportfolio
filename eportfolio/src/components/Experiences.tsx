@@ -24,7 +24,7 @@ function Experiences({ experiences }: { experiences: Experience[] }) {
                 index % 2 === 0 ? "timeline-start" : "timeline-end"
               }`}
             >
-              <div className="card bg-base-200 shadow-lg border-l-4 border-primary mb-8 hover:shadow-xl transition-shadow">
+              <div className="card bg-base-200 shadow-lg border-l-4 border-primary mb-8 hover:shadow-xl transition-shadow w-full md:w-200">
                 <div className="card-body">
                   <div className="flex justify-between items-start flex-wrap gap-2">
                     <div>
@@ -33,9 +33,13 @@ function Experiences({ experiences }: { experiences: Experience[] }) {
                       </h3>
                       <h4 className="text-lg">{exp.company}</h4>
                     </div>
-                    <span className="badge badge-secondary">{exp.period}</span>
+                    <span className="badge badge-secondary whitespace-nowrap">
+                      {exp.startDate} - {exp.endDate}
+                    </span>
                   </div>
-                  <p className="py-4 text-base-content/80">{exp.description}</p>
+                  <p className="py-4 text-base-content/80 line-clamp-4 hover:line-clamp-none transition-all">
+                    {exp.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="badge badge-outline">

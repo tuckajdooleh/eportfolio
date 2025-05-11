@@ -1,8 +1,18 @@
-import { Code, Github, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { Code, Github, ExternalLink, ChevronDown } from "lucide-react";
 
 import type { Project } from "../../types";
 
 function Projects({ projects }: { projects: Project[] }) {
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const showMoreProjects = () => {
+    setVisibleCount(projects.length);
+  };
+
+  const visibleProjects = projects.slice(0, visibleCount);
+  const hasMoreProjects = visibleCount < projects.length;
+
   return (
     <>
       <section id="projects" className="py-16">
@@ -18,17 +28,17 @@ function Projects({ projects }: { projects: Project[] }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <div
               key={index}
               className="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300"
             >
               <figure className="px-4 pt-4">
-                <div className="bg-base-300 w-full h-48 rounded-xl flex items-center justify-center">
-                  <span className="text-base-content/30 text-sm">
-                    Project Screenshot
-                  </span>
-                </div>
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="rounded-xl w-full h-48 object-cover object-top"
+                />
               </figure>
               <div className="card-body">
                 <h3 className="card-title text-xl font-semibold">
@@ -75,6 +85,18 @@ function Projects({ projects }: { projects: Project[] }) {
             </div>
           ))}
         </div>
+
+        {hasMoreProjects && (
+          <div className="text-center mt-12">
+            <button
+              onClick={showMoreProjects}
+              className="btn btn-outline btn-primary gap-2"
+            >
+              Load More Projects
+              <ChevronDown size={18} />
+            </button>
+          </div>
+        )}
       </section>
     </>
   );
