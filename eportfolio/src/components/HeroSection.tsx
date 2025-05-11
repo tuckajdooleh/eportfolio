@@ -1,6 +1,5 @@
 import Typewriter from "typewriter-effect";
 import ParticlesBackground from "./ParticlesBackground";
-import AnimatedSkills from "./AnimatedSkills";
 import CountUpStats from "./CountUpStats";
 
 function HeroSection() {
@@ -14,7 +13,7 @@ function HeroSection() {
 
         <div className="hero-content text-center z-10">
           <div className="max-w-4xl">
-            <h1 className="text-5xl font-bold text-primary mb-2">
+            <h1 className="h-42 text-5xl font-bold text-primary mb-2">
               I Am:
               <span className="text-secondary">
                 <Typewriter
@@ -43,9 +42,6 @@ function HeroSection() {
             </p>
 
             <CountUpStats />
-
-            {/* Skills Section */}
-            <AnimatedSkills />
 
             <div className="flex flex-wrap justify-center gap-4 mt-6">
               <a href="#projects" className="btn btn-primary">

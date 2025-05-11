@@ -1,5 +1,7 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { CERTIFICATIONS, EDUCATIONS, PROJECTS } from "../../constants";
+import { getYearsSinceDate, getDaysSinceDate } from "../../utils";
 
 function CountUpStats() {
   // Using Intersection Observer to detect when stats are visible
@@ -12,18 +14,18 @@ function CountUpStats() {
   const stats = [
     {
       title: "Projects Completed",
-      value: 42,
+      value: PROJECTS.length,
       suffix: "",
-      description: "Since 2020",
+      description: "Personal/Professional",
       color: "text-primary",
       icon: "🚀",
       duration: 2.5,
     },
     {
       title: "Years Experience",
-      value: 5,
+      value: getYearsSinceDate(EDUCATIONS[0].endDate),
       suffix: "+",
-      description: "Professional coding",
+      description: "Professional Coding",
       color: "text-secondary",
       icon: "⏳",
       duration: 2,
@@ -48,7 +50,7 @@ function CountUpStats() {
     },
     {
       title: "Certifications",
-      value: 8,
+      value: CERTIFICATIONS.length,
       suffix: "",
       description: "Industry recognized",
       color: "text-success",
@@ -57,7 +59,7 @@ function CountUpStats() {
     },
     {
       title: "Coffee Consumed",
-      value: 1825,
+      value: getDaysSinceDate(EDUCATIONS[0].endDate) * 2,
       suffix: "",
       description: "Cups and counting",
       color: "text-warning",
@@ -74,7 +76,7 @@ function CountUpStats() {
       duration: 4,
     },
     {
-      title: "Workshops Conducted",
+      title: "Workshops",
       value: 24,
       suffix: "",
       description: "Tech knowledge shared",
@@ -94,7 +96,7 @@ function CountUpStats() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto">
       <div
         ref={statsRef}
         className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4"
@@ -102,15 +104,15 @@ function CountUpStats() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="stat bg-base-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1"
+            className="p-4 bg-base-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col h-full"
           >
-            <div className="flex items-center justify-between">
-              <div className="stat-title font-medium">{stat.title}</div>
-              <div className="text-2xl">{stat.icon}</div>
+            <div className="flex items-center justify-between w-full mb-2">
+              <div className="font-medium text-base-content">{stat.title}</div>
+              <div className="text-2xl flex items-center justify-center w-8 h-8">
+                {stat.icon}
+              </div>
             </div>
-            <div
-              className={`stat-value ${stat.color} text-3xl md:text-4xl font-bold`}
-            >
+            <div className={`${stat.color} text-3xl md:text-4xl font-bold`}>
               {inView ? (
                 <CountUp
                   end={stat.value}
@@ -121,9 +123,7 @@ function CountUpStats() {
                 "0" + stat.suffix
               )}
             </div>
-            <div className="stat-desc text-sm opacity-75">
-              {stat.description}
-            </div>
+            <div className="text-sm opacity-75 mt-1">{stat.description}</div>
           </div>
         ))}
       </div>
