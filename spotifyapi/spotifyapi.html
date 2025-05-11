@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav
+      class="
+        navbar navbar-expand
+        bg-dark
+        navbar-dark
+        mb-3
+        justify-content-center
+      "
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/index.html"
+            >About</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/resume.html"
+            >Resume</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/awards.html"
+            >Awards/Certs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <h3>Spotify Group Listening (Using API)</h3>
+        <a href="https://spotify-group-listening.herokuapp.com/"
+          ><h4>https://spotify-group-listening.herokuapp.com/</h4></a
+        >
+      </div>
+      <br />
+      <p>
+        This is the second version of the Spotify Group Listening (Using
+        Selenium) app, but using Spotify’s API instead. I’m glad I decided to
+        remake this app using the API, because it makes this app much more
+        applicable, and I personally use it for all of my friend group road
+        trips.
+      </p>
+      <p>
+        I used bootstrap for the front end, and Node.js and SocketIO for the
+        backend. The app starts with a group creation page. The host who’s phone
+        will be used to play music, should be the one to click the “Create
+        Group” button. When doing so, they will be prompted to enter their
+        spotify credentials, and an auth token will be sent to the server. It
+        will also generate a long unique ID that would make it difficult for
+        people to guess the URL. The auth token is stored on the server under
+        the group id, it is never sent to the front end, therefore I am fairly
+        confident that users are safe.
+      </p>
+      <p>
+        This token is used when a user ( who is not the host ), clicks the
+        “Play” button. Since I am using Socket IO, an event called “Play” will
+        fire on the server side where it uses the groups ID to grab the auth
+        token which it uses to hit the “Play” endpoint, which will play a song
+        on the hosts device. This is the same for all the actions made available
+        on the front end.
+      </p>
+      <p>
+        One thing I forgot to mention earlier is that when the host creates a
+        room, a new playlist called “Spotify Group Listening” will show up in
+        their library. They need to wait until they or someone else adds at
+        least 1 song, then they should play the first song in the playlist, then
+        they can leave the rest up to their friends in the car.
+      </p>
+      <p>
+        The “search” option performs a search on the backend, and sends the
+        results back to the front end, where they are displayed for the user.
+      </p>
+      <p>
+        This still isn't a fully finished application. I plan to add a delete
+        song option, and a clear playlist option. I also need to find a more
+        reliable hosting source. I’m using Heroku’s free version right now. My
+        app seems to crash every now and then, and I assume it's because Heroku
+        will occasionally shut down your free applications, but I haven't taken
+        the time to test it.
+      </p>
+      <p>
+        I had this idea before I found out that Spotify is implementing this
+        feature themselves. You can make collaborative playlists, or start group
+        listening sessions. However the advantage to my app is that you can
+        easily send a link, and you don’t need Spotify to join a group session.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="spotifyapi.PNG" class="rounded img-fluid border m-3" />
+        <img src="spotifyapi2.PNG" class="rounded img-fluid border m-3" />
+        <img src="spotifyapi3.png" class="rounded img-fluid border m-3" />
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h6>Contact</h6>
+      <div class="row justify-content-center">
+        <a href="mailto:tuckerdooleyengineer@gmail.com"
+          ><img
+            src="/gmail.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://www.linkedin.com/in/tucker-dooley/"
+          ><img
+            src="/linkedin.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://github.com/tuckajdooleh"
+          ><img
+            src="/github.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>

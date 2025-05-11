@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav
+      class="
+        navbar navbar-expand
+        bg-dark
+        navbar-dark
+        mb-3
+        justify-content-center
+      "
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/index.html"
+            >About</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/resume.html"
+            >Resume</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/awards.html"
+            >Awards/Certs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <h3>MIDI Instrument Replacer</h3>
+        <a href="https://github.com/tuckajdooleh/Sound_Effect_To_Song"
+          ><h4>github</h4></a
+        >
+      </div>
+      <br />
+      <p>
+        This program takes a midi song file, and a .wav sound effect, and
+        generates a .wav song using that sound effect. If you've seen those (
+        Call Me Maybe but its Gabe the Dog ) or ( Fireflies but with an Airhorn
+        ) videos, thats what this program does.
+      </p>
+      <p>
+        I had to do a lot of research of .midi files and how to extract
+        information from them. I ended up using a ton of Python libraries to
+        make this easier. It's been a while since I made this, but I'm pretty
+        sure a midi file has a list of notes, each note object containing a Time
+        ( time since start of song ), Intensity ( volume ), and pitch. And there
+        can be multiple tracks for one midi song, such as vocal track, and
+        instrumantal track. So I looped through all the note objects in all of
+        the tracks.
+      </p>
+      <p>
+        For the provided sound effect I assume that it is already pitched to a
+        middle C. Then I create a chromatic scale by pitch shifting that sound
+        effect up and down by half steps. I label them all so I can easily
+        reference them in the future.
+      </p>
+      <p>
+        I create an empty song object where I append notes to as I loop through
+        the note objects. I pull the corresponding sound effect for each note by
+        looking at the notes pitch. Once I have looped through all notes, I
+        export the song.
+      </p>
+      <p>
+        One big issue with this is that one of the libraries I use only works on
+        Linux. So its bests to use this on Ubuntu.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="midi.PNG" class="rounded img-fluid border m-3" />
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h6>Contact</h6>
+      <div class="row justify-content-center">
+        <a href="mailto:tuckerdooleyengineer@gmail.com"
+          ><img
+            src="/gmail.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://www.linkedin.com/in/tucker-dooley/"
+          ><img
+            src="/linkedin.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://github.com/tuckajdooleh"
+          ><img
+            src="/github.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>

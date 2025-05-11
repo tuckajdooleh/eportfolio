@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav
+      class="
+        navbar navbar-expand
+        bg-dark
+        navbar-dark
+        mb-3
+        justify-content-center
+      "
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/index.html"
+            >About</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/resume.html"
+            >Resume</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/awards.html"
+            >Awards/Certs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <h3>IUPUI Class Finder 3D Game</h3>
+        <a
+          href="http://www.tuckerdooley.engineer/iupui-class-finder/classfinder.html"
+          ><h4>Play</h4></a
+        >
+      </div>
+      <br />
+      <p>
+        I made this for my 3D Game Programming honors contract project. This
+        game is supposed to help new students familiarize themselves with
+        IUPUI's campus so they know how to get to their classes on their first
+        day. They should start the game, then select their class buildings in
+        the order that they would go to them in a day. Then it drops them by the
+        Campus Center and they have to navigate to each of their classes.
+        Everytime they walk by a building it will show the name to them.
+        Everytime they reach the next class on their schedule, it will be
+        removed from their schedule. Once they complete their schedule they can
+        quit or restart. I used the skills I learned from my "Quarantine
+        Simulator" game to quickly make this.
+      </p>
+      <p>
+        I use the same Blender OSM add on to make a 3D model of the IUPUI area.
+        I then manually textured the buildings, roads, and ground. I then used
+        Godot to make a main menu, win screen, and first person controller to
+        walk around IUPUI.
+      </p>
+      <p>
+        I designed this so it would be easy for me to add new buildings options
+        to the game. All I have to do is create a new Area object and place it
+        on a building, name it, then that building will automatically be added
+        to the main menu buildings list.
+      </p>
+      <p>
+        The only thing left to do with this project is improve the textures.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="classfinder.PNG" class="rounded img-fluid border m-3" />
+        <img src="view.png" class="rounded img-fluid border m-3" />
+        <img src="view2.png" class="rounded img-fluid border m-3" />
+        <img src="view3.png" class="rounded img-fluid border m-3" />
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h6>Contact</h6>
+      <div class="row justify-content-center">
+        <a href="mailto:tuckerdooleyengineer@gmail.com"
+          ><img
+            src="/gmail.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://www.linkedin.com/in/tucker-dooley/"
+          ><img
+            src="/linkedin.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://github.com/tuckajdooleh"
+          ><img
+            src="/github.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>
