@@ -260,18 +260,7 @@ export const SKILLS: SkillCategory[] = [
       "Webpack",
       "Vite",
     ],
-  },
-  {
-    category: "Soft Skills",
-    skills: [
-      "Team Leadership",
-      "Problem Solving",
-      "Technical Writing",
-      "Mentoring",
-      "Project Management",
-      "Client Communication",
-    ],
-  },
+  }
 ];
 
 export const USER_INFO: UserInfo = {
