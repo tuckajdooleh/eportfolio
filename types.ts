@@ -70,6 +70,8 @@ export interface Education {
   institution: string;
   degree: string;
   field?: string;
+  major?: string;
+  minor?: string;
   startDate: string;
   endDate: string;
   location?: string;

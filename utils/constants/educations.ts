@@ -5,6 +5,8 @@ export const EDUCATIONS: Education[] = [
     institution: "Purdue University - Indianapolis",
     degree: "Bachelor of Science (BS)",
     field: "Computer Science",
+    major: "Computer Science",
+    minor: "Mathematics",
     startDate: "August 2017",
     endDate: "May 2021",
     location: "Indianapolis, Indiana",

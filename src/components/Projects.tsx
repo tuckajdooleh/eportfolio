@@ -14,7 +14,7 @@ function Projects({ projects }: { projects: Project[] }) {
   const hasMoreProjects = visibleCount < projects.length;
 
   return (
-    <section id="projects" className="py-16">
+    <section id="projects" className="py-16 px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold inline-flex items-center gap-2">
           <Code size={28} className="text-primary" />

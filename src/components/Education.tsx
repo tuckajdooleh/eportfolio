@@ -4,7 +4,7 @@ import type { Education } from "../../types";
 function Educations({ educations }: { educations: Education[] }) {
   return (
     <>
-      <section id="education" className="py-16">
+      <section id="education" className="py-16 px-2">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold inline-flex items-center gap-2">
             <GraduationCap size={28} className="text-primary" />
@@ -29,6 +29,13 @@ function Educations({ educations }: { educations: Education[] }) {
                       {edu.degree}
                     </h3>
                     <h4 className="text-lg">{edu.institution}</h4>
+                    {(edu.major || edu.minor) && (
+                      <div className="text-base text-base-content/80 mt-1">
+                        {edu.major && <span>Major: {edu.major}</span>}
+                        {edu.major && edu.minor && <span> • </span>}
+                        {edu.minor && <span>Minor: {edu.minor}</span>}
+                      </div>
+                    )}
                   </div>
                   <span className="badge badge-secondary whitespace-nowrap">
                     {edu.startDate} - {edu.endDate}
