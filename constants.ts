@@ -1,11 +1,11 @@
-import type { Award, Certification, Education, Experience, Project, SkillCategory, UserInfo } from "./types";
+import type { Certification, Education, Experience, Project, SkillCategory, UserInfo } from "./types";
 export const PROJECTS: Project[] = [
   {
     title: "Tetris",
     description:
       "Interactive Tetris game built using vanilla web technologies.",
     technologies: ["HTML", "JavaScript", "CSS"],
-    image: "/tetris/tetris.PNG",
+    image: "tetris/tetris.PNG",
     githubUrl: "https://github.com/tuckajdooleh/tetris",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/tetris/tetris.html",
   },
@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     description:
       "Algorithm implementation that solves the traveling salesman problem for corn maze pathfinding.",
     technologies: ["Python"],
-    image: "/CornMaze/result.PNG",
+    image: "CornMaze/result.PNG",
     githubUrl: "https://github.com/tuckajdooleh/CornMaze",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/CornMaze/CornMaze.html",
   },
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
     description:
       "Real-time multiplayer poker game with full game logic and player interaction.",
     technologies: ["Node.js", "Express.js", "Socket.IO", "HTML", "JavaScript", "CSS"],
-    image: "/poker/poker.PNG",
+    image: "poker/poker.PNG",
     githubUrl: "https://github.com/tuckajdooleh/poker",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/poker/poker.html",
   },
@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     description:
       "Application that enables synchronized music listening experiences across multiple users using the Spotify API.",
     technologies: ["Node.js", "Express.js", "Socket.IO", "HTML", "JavaScript", "CSS", "Bootstrap"],
-    image: "/spotifyapi/spotifyapi2.PNG",
+    image: "spotifyapi/spotifyapi2.PNG",
     githubUrl: "https://github.com/tuckajdooleh/spotifyapi",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/spotifyapi/spotifyapi.html",
   },
@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     description:
       "Alternative implementation of synchronized music listening using Selenium for automation.",
     technologies: ["Python", "Selenium", "Node.js", "Express.js", "Socket.IO", "HTML", "JavaScript", "CSS", "Bootstrap"],
-    image: "/spotifyselenium/spotify1.PNG",
+    image: "spotifyselenium/spotify1.PNG",
     githubUrl: "https://github.com/tuckajdooleh/spotifyselenium",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/spotifyselenium/spotifyselenium.html",
   },
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     description:
       "Support ticket management application built with Ember.js framework.",
     technologies: ["Ember.js", "Node.js", "Blueprint", "MongoDB"],
-    image: "/ember/profile.PNG",
+    image: "ember/profile.PNG",
     githubUrl: "https://github.com/tuckajdooleh/ember",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/ember/ember.html",
   },
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     description:
       "Database-driven member management system for an organization.",
     technologies: ["PHP", "SQL", "HTML", "JavaScript", "Bootstrap"],
-    image: "/baci/baci.PNG",
+    image: "baci/baci.PNG",
     githubUrl: "https://github.com/tuckajdooleh/baci",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/baci/baci.html",
   },
@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
     description:
       "Member management system designed specifically for church administration.",
     technologies: ["PHP", "SQL", "HTML", "JavaScript", "Bootstrap"],
-    image: "/impact/membermanagement.PNG",
+    image: "impact/membermanagement.PNG",
     githubUrl: "https://github.com/tuckajdooleh/impact",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/impact/impact.html",
   },
@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
     description:
       "Python tool that allows for replacement of instruments in MIDI files.",
     technologies: ["Python"],
-    image: "/midi/midi.PNG",
+    image: "midi/midi.PNG",
     githubUrl: "https://github.com/tuckajdooleh/midi",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/midi/midi.html",
   },
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     description:
       "Comprehensive system for tracking church members and their information.",
     technologies: ["PHP", "HTML", "JavaScript", "CSS", "SQL"],
-    image: "/membertracking/mainadmin.PNG",
+    image: "membertracking/mainadmin.PNG",
     githubUrl: "https://github.com/tuckajdooleh/membertracking",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/membertracking/membertracking.html",
   },
@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
     description:
       "3D interactive game to help students find their classes at IUPUI campus.",
     technologies: ["Godot Engine", "Blender"],
-    image: "/iupuitour/classfinder.PNG",
+    image: "iupuitour/classfinder.PNG",
     githubUrl: "https://github.com/tuckajdooleh/iupuitour",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/iupuitour/iupuitour.html",
   },
@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
     description:
       "3D simulation game based on quarantine experiences.",
     technologies: ["Godot Engine", "Blender"],
-    image: "/quarantine/Screenshot (7).png",
+    image: "quarantine/Screenshot (7).png",
     githubUrl: "https://github.com/tuckajdooleh/quarantine",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/quarantine/quarantine.html",
   },
@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
     description:
       "Real-time multiplayer 2D game with network synchronization.",
     technologies: ["Node.js", "Express.js", "Socket.IO", "HTML", "JavaScript", "CSS"],
-    image: "/2dmultiplayer/players.PNG",
+    image: "2dmultiplayer/players.PNG",
     githubUrl: "https://github.com/tuckajdooleh/2dmultiplayer",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/2dmultiplayer/2dmultiplayer.html",
   },
@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
     description:
       "Python application with GUI that helps find optimal paths between classes.",
     technologies: ["Python", "Tkinter"],
-    image: "/pythonpathfinder/dev.PNG",
+    image: "pythonpathfinder/dev.PNG",
     githubUrl: "https://github.com/tuckajdooleh/pythonpathfinder",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/pythonpathfinder/pythonpathfinder.html",
   },
@@ -131,7 +131,7 @@ export const PROJECTS: Project[] = [
     description:
       "Java-based application developed as a final project for AP Computer Science.",
     technologies: ["Java"],
-    image: "/lunchtime/start.PNG",
+    image: "lunchtime/start.PNG",
     githubUrl: "https://github.com/tuckajdooleh/lunchtime",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/lunchtime/lunchtime.html",
   },
@@ -140,7 +140,7 @@ export const PROJECTS: Project[] = [
     description:
       "Java game featuring block-based puzzles and challenges.",
     technologies: ["Java"],
-    image: "/blocks/start.PNG",
+    image: "blocks/start.PNG",
     githubUrl: "https://github.com/tuckajdooleh/blocks",
     liveUrl: "https://tuckajdooleh.github.io/eportfolio/projects/blocks/blocks.html",
   },
@@ -281,18 +281,18 @@ export const USER_INFO: UserInfo = {
     github: "https://github.com/tuckajdooleh",
     linkedin: "https://linkedin.com/in/tucker-dooley",
     email: "mailto:tuckerdooleyengineer@gmail.com.com",
-    resume: "/Resume.pdf",
+    resume: "Resume.pdf",
   },
 };
 
 export const EDUCATIONS: Education[] = [
   {
-    institution: "Purdue University",
+    institution: "Purdue University - Indianapolis",
     degree: "Bachelor of Science (BS)",
     field: "Computer Science",
     startDate: "August 2017",
     endDate: "May 2021",
-    location: "West Lafayette, Indiana",
+    location: "Indianapolis, Indiana",
     achievements: [
       "Promising Freshman in Computer Science Award",
       "Dean's List",
@@ -303,7 +303,6 @@ export const EDUCATIONS: Education[] = [
       "Software Engineering",
       "Database Systems",
       "Operating Systems",
-      "Computer Networks",
       "Web Development"
     ],
     gpa: "3.67"
@@ -371,7 +370,3 @@ export const CERTIFICATIONS: Certification[] = [
     image: "awardsCertificates/xtern.jpg"
   }
 ];
-
-export const AWARDS: Award[] = [
-  
-]

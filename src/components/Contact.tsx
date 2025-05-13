@@ -80,13 +80,13 @@ function Contact() {
               </p>
               <div className="flex flex-col gap-4 w-full max-w-xs">
                 <a
-                  href="mailto:alex@example.com"
+                  href="mailto:tuckerdooleyengineer@gmail.com"
                   className="btn bg-primary-content/20 hover:bg-primary-content/30 border-none text-primary-content"
                 >
-                  alex@example.com
+                  tuckerdooleyengineer@gmail.com
                 </a>
                 <a
-                  href="https://linkedin.com/in/alexmorgan"
+                  href="https://linkedin.com/in/tucker-dooley"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn bg-primary-content/20 hover:bg-primary-content/30 border-none text-primary-content"
@@ -94,7 +94,7 @@ function Contact() {
                   LinkedIn Profile
                 </a>
                 <p className="mt-4 text-primary-content/80">
-                  Based in San Francisco, CA
+                  Indianapolis, IN
                   <br />
                   Available for remote work worldwide
                 </p>
