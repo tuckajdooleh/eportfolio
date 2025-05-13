@@ -4,7 +4,7 @@ import {
   EXPERIENCES,
   EDUCATIONS,
   CERTIFICATIONS,
-} from "../../constants";
+} from "../../utils/constants";
 import Projects from "./Projects";
 import Experiences from "./Experiences";
 import HeroSection from "./HeroSection";

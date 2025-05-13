@@ -1,10 +1,30 @@
 export interface Project {
   title: string;
-  description: string;
+  shortDescription: string;  // Brief description for card view
+  description: string;       // Detailed description for expanded view
   technologies: string[];
-  image: string;
+  displayMedia: {           // Media shown in the card view
+    type: "image" | "gif" | "video";
+    url: string;
+    thumbnail?: string;     // Optional thumbnail for videos
+    alt?: string;          // Accessibility description
+  };
+  media: {                  // Array of all media to show in expanded view (including display media)
+    type: "image" | "gif" | "video";
+    url: string;
+    thumbnail?: string;     // Optional thumbnail for videos
+    alt?: string;          // Accessibility description
+  }[];                     // Array of media items
   githubUrl?: string;
   liveUrl?: string;
+  detailedDescription?: string;
+  features?: string[];
+  challenges?: string[];
+  learnings?: string[];
+  dateCompleted?: string;
+  teamSize?: number;
+  role?: string;
+  status?: "completed" | "in-progress" | "archived";
 }
 
 export interface SkillCategory {
@@ -57,6 +77,7 @@ export interface Education {
   gpa?: string;
   achievements?: string[];
   courses?: string[];
+  skills?: string[];
 }
 
 export interface Certification {

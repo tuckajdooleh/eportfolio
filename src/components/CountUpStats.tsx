@@ -1,7 +1,7 @@
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { CERTIFICATIONS, EDUCATIONS, PROJECTS } from "../../constants";
-import { getYearsSinceDate, getDaysSinceDate } from "../../utils";
+import { CERTIFICATIONS, EDUCATIONS, PROJECTS } from "../../utils/constants";
+import { getYearsSinceDate, getDaysSinceDate } from "../../utils/utils";
 
 function CountUpStats() {
   const { ref: statsRef, inView } = useInView({
