@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav
+      class="
+        navbar navbar-expand
+        bg-dark
+        navbar-dark
+        mb-3
+        justify-content-center
+      "
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/index.html"
+            >About</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/resume.html"
+            >Resume</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/awards.html"
+            >Awards/Certs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <h3>Python Traveling Salesman Corn Maze Solver</h3>
+        <a href="https://github.com/tuckajdooleh/corn_maze_solver"
+          ><h4>https://github.com/tuckajdooleh/corn_maze_solver</h4></a
+        >
+      </div>
+      <br />
+      <p>
+        I went to the Purdue Corn maze with some friends, and the corn maze has
+        numerous coupon stations scattered throughout the maze. I figured it
+        would be an interesting problem to try making a program that would find
+        the shortest path from the start, through all the coupon stations, and
+        back to the start. I later realized that this is literally just the
+        "Traveling Salesman Problem".
+      </p>
+      <p>
+        I decided to use Python for simplicity. I start by reading in a maze.png
+        and converting it to binary (0,1) pixel values using a threshhold value
+        to compare the pixels against. Then I added all the white pixels to an
+        adj list. Then I wrote a BFS and an A* function to find the shortest
+        paths between 2 points. Then to find the shortest route, I calculated
+        the shortest distance from every point to every other point ( with the
+        exceptions of the start and end points ). Then once the shortest paths
+        are stored I can do the brute force traveling salesman algorithm where I
+        consider every permutation of paths through the points. This has N! time
+        complexity, but since all the paths are already computed it doesn't take
+        very long. I plan to eventually use the dynamic programming traveling
+        salesman approach to improve time efficiency.
+      </p>
+      <p>
+        For fun I programmed some visualizations of the pathfinding process. I
+        programmed in a delay so we can slowly watch the pathfinding process.
+        Below are some GIF's demonstrating this.
+      </p>
+      <p>
+        The first is A*, the second is BFS, the last image is the resulting
+        shortest path. Except the resulting path does not return to the start
+        yet.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="AStar.gif" class="rounded img-fluid border m-3" />
+
+        <img src="BFS.gif" class="rounded img-fluid border m-3" />
+        <img src="result.PNG" class="rounded img-fluid border m-3" />
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h6>Contact</h6>
+      <div class="row justify-content-center">
+        <a href="mailto:tuckerdooleyengineer@gmail.com"
+          ><img
+            src="/gmail.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://www.linkedin.com/in/tucker-dooley/"
+          ><img
+            src="/linkedin.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://github.com/tuckajdooleh"
+          ><img
+            src="/github.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>

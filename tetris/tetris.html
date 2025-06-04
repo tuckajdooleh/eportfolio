@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav
+      class="
+        navbar navbar-expand
+        bg-dark
+        navbar-dark
+        mb-3
+        justify-content-center
+      "
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/index.html"
+            >About</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/resume.html"
+            >Resume</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/awards.html"
+            >Awards/Certs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <h3>Tetris</h3>
+        <a href="https://tuckajdooleh.github.io/tetris/"
+          ><h4>Play in Browser</h4></a
+        >
+      </div>
+      <br />
+      <p>
+        I love playing Tetris, so I decided to program it for fun. I decided to
+        use HTML/JavaScript just so I could play it in the browser. For some
+        reason I decided to not use the Canvas element. Everything in this uses
+        divs and css to display the game. I also use setTimeout for the delays.
+      </p>
+      <p>
+        The board is just a 2d array. I have a shape class, and an array of all
+        the differently used shapes. Which one could easily add their own shapes
+        if they wish. The shape class has an array of points which create the
+        shape. It also has a pivot property which is used to rotate the shape. I
+        use the rotate a point about a point equation to rotate all of the
+        points in a shape about that shapes pivot point. I also programmed in
+        shadows, so the shape class also has a generate shadow function which
+        makes a temporary copy of the shape and moves it down until it hits
+        something, then just renders a greyed out shape there. I also programmed
+        in hard/fast drop, which does the same thing as the shadow function
+        where it just moved down until it collides with something. I also
+        programmed in the classic tetris random selection method. This method
+        generates a bag of all the shapes randomly, and when all of those shapes
+        have been used, it generates a new shape. There is also a score counter
+        which prioritizes tetrises and increases the speed as you play.
+        Programming in the clear line feature was tricky but fun. Everytime a
+        block has been dropped it loops through the points of the shape, and
+        checks the full row for each point ( not repeating points in the same
+        row ), and it checks to see if that row is full, if it is, then it is
+        deleted, and all rows above it are shifted down by 1.
+      </p>
+      <p>
+        Also upon request from my friends, I have added mobile swiping controls.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="tetris.gif" class="rounded img-fluid border m-3" />
+        <img src="tetris.PNG" class="rounded img-fluid border m-3" />
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h6>Contact</h6>
+      <div class="row justify-content-center">
+        <a href="mailto:tuckerdooleyengineer@gmail.com"
+          ><img
+            src="/gmail.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://www.linkedin.com/in/tucker-dooley/"
+          ><img
+            src="/linkedin.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://github.com/tuckajdooleh"
+          ><img
+            src="/github.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>
