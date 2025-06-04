@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h1>Tucker Dooley</h1>
+      <h3>Software Engineer</h3>
+    </div>
+    <nav
+      class="
+        navbar navbar-expand
+        bg-dark
+        navbar-dark
+        mb-3
+        justify-content-center
+      "
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/index.html"
+            >About</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/projects.html"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/resume.html"
+            >Resume</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://tuckajdooleh.github.io/eportfolio/awards.html"
+            >Awards/Certs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="text-center">
+        <h3>Class Pathfinder ( Python )</h3>
+        <a href="pathfinder.zip" download><h4>Download Zip</h4></a>
+      </div>
+      <br />
+      <p>
+        I created this for CSCI-230 ( Introduction to Computer Science ) class
+        final project. I was living at the Tower on campus at the time, and I
+        would typically sleep until I had just enough time to roll out of bed
+        and walk to class. So I wanted a program that would tell me exactly how
+        long it would take to get to class, and what the fastest way would be.
+      </p>
+      <p>
+        At the time I wasn’t experienced enough to create my own implementation
+        of the A* pathfinding algorithm ( I was a Freshman ), So I used a python
+        library that would take a 2d array of obstacles, a starting point, and
+        an ending point. It would then return a list of points where the path
+        would be.
+      </p>
+      <p>
+        I created the interface with TKinter, the background was a screenshot of
+        IUPUI’s Campus map. I created a “Dev” mode where you could left click to
+        add obstacles ( like fill in the borders of buildings ) and right click
+        to delete obstacles. I just created a 2d grid of red squares and took
+        the location of the mouse click and divided by the length/width of the
+        squares to find out which one the user clicked on. I also made a way to
+        save your configuration to a text file which would be loaded when the
+        program starts.
+      </p>
+      <p>
+        Finally to use the program just left click to select the start position,
+        and right click to select the end position, then click “Path”.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <img src="main.PNG" class="rounded img-fluid border m-3" />
+        <img src="path.PNG" class="rounded img-fluid border m-3" />
+        <img src="dev.PNG" class="rounded img-fluid border m-3" />
+      </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <h6>Contact</h6>
+      <div class="row justify-content-center">
+        <a href="mailto:tuckerdooleyengineer@gmail.com"
+          ><img
+            src="/gmail.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://www.linkedin.com/in/tucker-dooley/"
+          ><img
+            src="/linkedin.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+        <a href="https://github.com/tuckajdooleh"
+          ><img
+            src="/github.png"
+            style="
+              height: 60px;
+              border: solid black 1px;
+              margin: 1vw;
+              border-radius: 12px;
+            "
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>
